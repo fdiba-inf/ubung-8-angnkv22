@@ -8,12 +8,12 @@ public class Point {
     public Point() {
     
     this.x = 0;
-    this.y =0;
+    this.y = 0;
     }
 
     public Point(double x, double y) {
-    this.x=x;
-    this.y=y;
+    this.x = x;
+    this.y = y;
     }
 
     public Point(Point otherPoint) {
@@ -22,8 +22,10 @@ public class Point {
     }
 
     public void initialize() {
-     this.x = Utils.INPUT.nextDouble();
-     this.y = Utils.INPUT.nextDouble();
+     x = Utils.INPUT.nextDouble();
+     System.out.println();
+     y = Utils.INPUT.nextDouble();
+     System.out.println();
     }
 
     public void translate(double xDelta, double yDelta) {
@@ -37,14 +39,13 @@ public class Point {
     }
 
     public boolean equals(Point otherPoint) {
-       if(Utils.equals(this.x, otherPoint.x) && Utils.equals(this.y, otherPoint.y)){
+       if(Utils.equals(this.x, otherPoint.x) && Utils.equals(this.y, otherPoint.y))
         return true;
-        }
         return false;
     }
 
     public String toString() {
-        return String.format("(%.2f, %.2f)", this.x, this.y);
+        return String.format("(%.1f, %.1f)", this.x, this.y);
       
     }
 }
